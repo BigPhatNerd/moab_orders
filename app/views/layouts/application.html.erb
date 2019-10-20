@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>MoabOrders</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
+<body>
+    <p class="alert alert-info">
+        <% if notice.present? %>
+        <%= notice %>
+        <% end %>
+    </p>
+    <p class="alert alert-danger">
+        <% if alert.present? %>
+        <%= alert %>
+        <% end %>
+    </p>
     <%= yield %>
-  </body>
+</body>
+
 </html>
