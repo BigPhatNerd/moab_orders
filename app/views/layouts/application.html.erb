@@ -10,16 +10,36 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a routerLink="/" class="navbar-brand" href="/">MOAB Jacket orders</a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/orders/new">Place Order</a>
+            </li>
+            <li class="nav-item">
+        </ul>
+        <ul class="navbar-nav">
+            <% if user_signed_in? %>
+            <li class="nav-item">
+                <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+            </li>
+            <% else %>
+            <li class="nav-item">
+                <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
+            </li>
+            <% end %>
+        </ul>
+    </nav>
+    <% if notice.present? %>
     <p class="alert alert-info">
-        <% if notice.present? %>
         <%= notice %>
-        <% end %>
     </p>
+    <% end %>
+    <% if alert.present? %>
     <p class="alert alert-danger">
-        <% if alert.present? %>
         <%= alert %>
-        <% end %>
     </p>
+    <% end %>
     <%= yield %>
 </body>
 
