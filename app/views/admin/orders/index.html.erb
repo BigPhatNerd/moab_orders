@@ -1,0 +1,36 @@
+<br />
+<div class="booyah-box col-10 offset-1">
+    <h1 class="text-center">MOAB Orders</h1>
+    <hr />
+    <% @orders.each do |order| %>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <%= order.count %>
+                <%= order.first_name %>
+                <%= order.last_name %>
+            </div>
+            <div class="col-1">
+                <%= order.item %>
+            </div>
+            <div class="col-1">
+                <%= order.size %>
+            </div>
+            <div class="col-1">
+                <%= order.quantity %>
+            </div>
+            <div class="col-1">
+                <%= order.color %>
+            </div>
+            <div class="col-1">
+                <span class="badge badge-default">
+                    <%= number_to_currency order.cost %>
+                </span>
+            </div>
+        </div>
+        <% end %>
+        <div class="col-sm-4 col-12 text-center">
+            <%= link_to 'Button', '#', class: 'btn btn-primary btn-large' %>
+        </div>
+    </div>
+</div>

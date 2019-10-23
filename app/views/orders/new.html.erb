@@ -1,6 +1,6 @@
 <br />
 <div class=" text-center booyah-box col-10 offset-1">
-    <h1>ADMIN Order jackets</h1>
+    <h1>Order jackets</h1>
     <%= simple_form_for @order, url: admin_orders_path do |f| %>
     <%= f.input :first_name %>
     <%= f.input :last_name %>
@@ -8,7 +8,7 @@
     <%= f.input :size, :collection =>%w[XS S M L XL XXL] %>
     <%= f.input :quantity %>
     <%= f.input :color, :collection => %w[red yellow blue grey] %>
-    <%= @order.price %>
+    <%= f.label :cost %>
     <br />
     <%= f.submit "Create Order", class: 'btn btn-primary' %>
     <% end %>

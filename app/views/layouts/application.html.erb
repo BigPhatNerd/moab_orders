@@ -8,7 +8,6 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
-
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <a routerLink="/" class="navbar-brand" href="/">MOAB Jacket orders</a>
@@ -17,6 +16,8 @@
                 <a class="nav-link" href="/orders/new">Place Order</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/admin/orders/new">Admin Order</a>
+            </li>
         </ul>
         <ul class="navbar-nav">
             <% if user_signed_in? %>
