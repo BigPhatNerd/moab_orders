@@ -1,17 +1,21 @@
 <br />
 <div class=" text-center booyah-box col-10 offset-1">
-    <h1>Order jackets</h1>
-    <%= simple_form_for @order, url: admin_orders_path do |f| %>
+    <h1> Orders</h1>
+    <%= simple_form_for @order, url: orders_path do |f| %>
     <%= f.input :first_name %>
     <%= f.input :last_name %>
-    <%= f.input :item, :collection => %w[jacket shirt pullover]%>
-    <%= f.input :size, :collection =>%w[XS S M L XL XXL] %>
+    <%= f.input :item, :collection => ["jacket $30", "shirt $20", "pullover $50"]%>
     <%= f.input :quantity %>
+    <%= f.input :size, :collection =>%w[XS S M L XL XXL] %>
     <%= f.input :color, :collection => %w[red yellow blue grey] %>
-    <%= f.label :cost %>
+    <%= f.input :cost, :as => :hidden, input_html: {id: "order_cost"} %>
+    <p id="test">
+    </p>
     <br />
     <%= form_tag orders_path(@order) do %>
-    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-description="A month's subscription" data-amount="500" data-locale="auto"></script>
+    </article>
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-description="Cost of Methodist Olive Branch apparel" data-amount="" data-locale="auto">
+    </script>
     <% end %>
     <% end %>
     <br />

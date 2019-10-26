@@ -20,7 +20,7 @@
     -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
     -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
     box-shadow: 1px 1px 2px 0 #d0d0d0;
-    background: #fff;
+    background: #B1015D;
     border: 1px solid #ccc;
     border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
     padding: 10px;
@@ -32,4 +32,18 @@
     border-radius: 3px;
     padding: 2px 8px 2px 8px;
     margin: 10px;
+}
+
+.bold-underline {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+.index {
+    font-size: 28px;
+}
+
+.navbar {
+    background-color: grey;
 }

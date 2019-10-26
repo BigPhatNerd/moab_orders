@@ -1,1 +1,12 @@
-<h1> Amanda's Order Form Index Page</h1>
+<div class="booyah-box col-10 offset-1">
+    <h1 class="text-center">MOAB Jacket Orders Homepage </h1>
+    <div class="col-10 offset-1">
+        <div class="text-center">
+            <% if current_user && current_user.admin %>
+            <%= link_to "Order index page", orders_path, class: 'btn btn-primary btn-large' %>
+            <br />
+            <%= link_to 'Order Form', new_order_path, class: 'btn btn-primary btn-large' %>
+        </div>
+        <br />
+    </div>
+</div>

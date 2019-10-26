@@ -1,8 +1,8 @@
 class OrderFormsController < ApplicationController
+before_action :authenticate_user!
 
 
-
-def show
+def index
 		
 	end
 
