@@ -1,4 +1,5 @@
 class Admin::OrdersController < ApplicationController
+	skip_before_action :verify_authenticity_token, :only => :create
 	before_action :authenticate_user!
 
 	def index
@@ -7,6 +8,7 @@ class Admin::OrdersController < ApplicationController
 	end
 	def new
 		@order = Order.new
+		
 	end
 
 	def show
@@ -15,11 +17,31 @@ class Admin::OrdersController < ApplicationController
 
 	def create
 		@order = current_user.orders.create(order_params)
-		if @order.valid?
-			redirect_to admin_order_path(@order)
-		else
-			render :new, status: :unprocessable_entity
-		end
+		
+			
+			  # Amount in cents
+   
+	@amount = (@order.price * 100).to_i	
+	
+
+    customer = Stripe::Customer.create(
+      email: params[:stripeEmail],
+      source: params[:stripeToken]
+    )
+
+    charge = Stripe::Charge.create(
+      customer: customer.id,
+      amount: @amount,
+      description: 'Rails Stripe customer',
+      currency: 'usd'
+    )
+   
+    redirect_to admin_order_path(@order)
+
+  rescue Stripe::CardError => e
+    flash[:error] = e.message
+    redirect_to root_path
+		
 	end
 
 	private 

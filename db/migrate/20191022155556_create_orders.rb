@@ -5,7 +5,7 @@ class CreateOrders < ActiveRecord::Migration[5.2]
     	t.string :item
     	t.string :description
     	t.string :size
-    	t.decimal :cost
+    	t.integer :cost
     	t.string :color
     	t.integer :quantity
 
@@ -13,5 +13,6 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       t.timestamps
     end
     add_index :orders, :user_id
+    add_index :orders, :id
   end
 end

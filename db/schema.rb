@@ -20,13 +20,14 @@ ActiveRecord::Schema.define(version: 2019_10_22_162125) do
     t.string "item"
     t.string "description"
     t.string "size"
-    t.decimal "cost"
+    t.integer "cost"
     t.string "color"
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
+    t.index ["id"], name: "index_orders_on_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 

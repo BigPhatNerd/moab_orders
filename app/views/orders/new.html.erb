@@ -10,7 +10,9 @@
     <%= f.input :color, :collection => %w[red yellow blue grey] %>
     <%= f.label :cost %>
     <br />
-    <%= f.submit "Create Order", class: 'btn btn-primary' %>
+    <%= form_tag orders_path(@order) do %>
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-description="A month's subscription" data-amount="500" data-locale="auto"></script>
+    <% end %>
     <% end %>
     <br />
 </div>
