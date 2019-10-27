@@ -73,9 +73,21 @@ p {
     font-size: 28px;
 }
 
-.form-control {
-    border: 2px solid;
-    border-color: black;
+.btn {
+    color: white;
+    background-color: grey;
+}
+
+a {
+    color: white
+}
+
+.text-muted {
+    color: white;
+}
+
+.badge {
+    font-size: 96%;
 }
 
 .orders {
@@ -98,7 +110,7 @@ p {
 .navbar-light .navbar-nav .nav-link {
     color: #b1015c;
     font-family: 'Share Tech', sans-serif;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .home-box {
@@ -114,6 +126,18 @@ p {
 }
 
 .btn-primary:hover {
+    background-color: white;
+    color: #0275d8;
+}
+
+.cash.btn.btn-primary.btn-large {
+    width: 300px;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 24px;
+    border-color: white;
+}
+
+.cash.btn.btn-primary.btn-large:hover {
     background-color: white;
     color: #0275d8;
 }
@@ -148,7 +172,58 @@ select.form-control:not([size]):not([multiple]) {
     margin-top: 20px;
 }
 
-.smaller,
-h3 {
-    font-size: 20px;
+.index-size {
+    font-size: 18px;
+}
+
+.moab-orders {
+    margin-top: 40px;
+}
+
+#show-when-small {
+    visibility: visible;
+}
+
+#hide-when-small {
+    visibility: hidden;
+}
+
+@media (min-width: 400px) {
+    .index-size {
+        font-size: 12px;
+    }
+
+    #show-when-small {
+        visibility: hidden;
+    }
+
+    #hide-when-small {
+        visibility: visible;
+    }
+}
+
+@media (min-width: 768px) {
+    .index-size {
+        font-size: 17px;
+    }
+
+    #show-when-small {
+        visibility: hidden;
+    }
+
+    #hide {
+        visibility: visible;
+    }
+}
+
+@media (min-width: 992px) {
+    .index-size {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .index-size {
+        font-size: 30px;
+    }
 }

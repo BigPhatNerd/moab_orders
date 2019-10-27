@@ -4,6 +4,7 @@
         <div class="text-center">
             <% if current_user && current_user.admin? %>
             <%= link_to "Order index page", orders_path, class: 'btn btn-primary btn-large' %>
+            <%= link_to "Purchase Order", purchase_path, class: 'btn btn-primary btn-large' %>
             <% end %>
             <br />
             <br />

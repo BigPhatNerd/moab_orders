@@ -1,5 +1,7 @@
 class Order < ApplicationRecord
 	belongs_to :user
+	default_scope { order(created_at: :asc) }
+
 
 	validates :first_name, presence: true
 	validates :last_name, presence: true
@@ -8,6 +10,7 @@ class Order < ApplicationRecord
 	validates :quantity, presence: true
 	validates :color, presence: true
 	validates :cost, presence: true
+	
 	
 	def price
 		case self.item

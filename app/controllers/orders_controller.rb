@@ -4,8 +4,9 @@ class OrdersController < ApplicationController
 
   def index
     @orders = Order.all
-   
 
+  end
+  def purchase
   end
   def new
     @order = Order.new
@@ -35,12 +36,18 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = current_user.orders.create(order_params)
-    
+    if current_user && current_user.admin?
 
+      current_user.orders.create(order_params)
+
+      redirect_to order_path(Order.last.id)
+return
+   end
+    if current_user && !current_user.admin?
+ current_user.orders.create(order_params)
         # Amount in cents
 
-        @amount = (@order.price * 100).to_i 
+        @amount = (Order.last.cost * 100).to_i 
 
 
         customer = Stripe::Customer.create(
@@ -54,20 +61,26 @@ class OrdersController < ApplicationController
           description: 'Rails Stripe customer',
           currency: 'usd'
           )
-
-        redirect_to order_path(@order)
-
-      rescue Stripe::CardError => e
-        flash[:error] = e.message
-        redirect_to root_path
-
       end
+      
 
-      private 
+      redirect_to order_path(Order.last.id)
 
-      def order_params
-        params.require(:order).permit(:first_name, :last_name, :item, :size, :quantity, :color, :description, :cost)
-
-      end
+    rescue Stripe::CardError => e
+      flash[:error] = e.message
+      redirect_to root_path
 
     end
+    
+
+    private 
+
+    def order_params
+      params.require(:order).permit(:first_name, :last_name, :item, :size, :quantity, :color, :description, :cost)
+
+    end
+    def current_order
+@current_order ||=Order.find(params[:id])
+    end
+
+  end
