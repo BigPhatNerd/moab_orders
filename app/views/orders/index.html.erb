@@ -2,35 +2,99 @@
 <div class="booyah-box col-10 offset-1">
     <h1 class="text-center">MOAB Orders</h1>
     <hr />
-    <% @orders.each do |order| %>
     <div class="container">
-        <div class="row">
-            <div class="col-2">
-                <%= order.id %>
-                <%= order.first_name %>
-                <%= order.last_name %>
+        <div class="row ">
+            <div class="col-1">
+                <h3>
+                    Id
+                </h3>
+            </div>
+            <div class="col">
+                <h3>
+                    Name
+                </h3>
+            </div>
+            <div class="col">
+                <h3>
+                    Item
+                </h3>
             </div>
             <div class="col-1">
-                <%= order.item %>
+                <h3>
+                    Size
+                </h3>
             </div>
             <div class="col-1">
-                <%= order.size %>
+                <h3>
+                    Qty
+                </h3>
             </div>
             <div class="col-1">
-                <%= order.quantity %>
+                <h3>
+                    Color
+                </h3>
+            </div>
+            <div class="col-3">
+                <h3>
+                    Cost
+                </h3>
+            </div>
+        </div>
+        <% @orders.each do |order| %>
+        <div class="row  smaller margin-index">
+            <div class="col-1">
+                <h3>
+                    <%= order.id %>
+                </h3>
+            </div>
+            <div class="col">
+                <h3>
+                    <%= order.first_name %>
+                    <%= order.last_name %>
+                </h3>
+            </div>
+            <div class="col">
+                <h3>
+                    <%= order.item %>
+                </h3>
             </div>
             <div class="col-1">
-                <%= order.color %>
+                <h3>
+                    <%= order.size %>
+                </h3>
             </div>
             <div class="col-1">
-                <span class="badge badge-default">
-                    <%= number_to_currency order.cost %>
-                </span>
+                <h3>
+                    <%= order.quantity %>
+                </h3>
             </div>
+            <div class="col-1">
+                <h3>
+                    <%= order.color %>
+                </h3>
+            </div>
+            <div class="col-3">
+                <h3>
+                    <span class="badge badge-default">
+                        <%= number_to_currency order.cost %>
+                    </span>
+                    &nbsp;&nbsp;
+                    <%=link_to  edit_order_path(order),  class: 'edit-symbol' do %>
+                    <i class="far fa-edit" style="color:white"></i>
+                    <% end %>&nbsp;&nbsp;
+                    <%= link_to order_path(order), method: :delete, data: {confirm: 'Are you sure you want to delete this?'},class: 'delete-symbol' do %>
+                    <i class="far fa-trash-alt" style='color:white'></i>
+                    <% end %>
+                </h3>
+            </div>
+        </div>
+        <div class="underline">
         </div>
         <% end %>
-        <div class="col-sm-4 col-12 text-center">
-            <%= link_to 'Button', '#', class: 'btn btn-primary btn-large' %>
-        </div>
     </div>
+    <br />
+    <div class="col-12 text-center">
+        <%= link_to 'Homepage', root_path, class: 'btn btn-primary btn-large' %>
+    </div>
+    <br />
 </div>

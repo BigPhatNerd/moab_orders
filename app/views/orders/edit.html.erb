@@ -3,7 +3,7 @@
 <br />
 <div class=" text-center booyah-box col-10 offset-1">
     <h1 class="orders"> Orders</h1>
-    <%= simple_form_for @order, url: orders_path do |f| %>
+    <%= simple_form_for @order, url: order_path do |f| %>
     <%= f.input :first_name %>
     <%= f.input :last_name %>
     <%= f.input :item, :collection => ["jacket $30", "shirt $20", "pullover $50"]%>
@@ -11,14 +11,8 @@
     <%= f.input :size, :collection =>%w[XS S M L XL XXL] %>
     <%= f.input :color, :collection => %w[red yellow blue grey] %>
     <%= f.input :cost, :as => :hidden, input_html: {id: "order_cost"} %>
+    <%= f.submit "Update", class: 'btn btn-primary btn-large' %>
     <p id="test">
     </p>
-    <br />
-    <%= form_tag orders_path(@order) do %>
-    </article>
-    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-description="Cost of Methodist Olive Branch apparel" data-email="<%= current_user.email %>" data-amount="" data-locale="auto">
-    </script>
-    <% end %>
     <% end %>
     <br />
-</div>

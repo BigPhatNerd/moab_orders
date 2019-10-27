@@ -4,6 +4,7 @@ class OrdersController < ApplicationController
 
   def index
     @orders = Order.all
+   
 
   end
   def new
@@ -15,40 +16,58 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
+  def edit 
+    @order = Order.find(params[:id])
+
+  end
+
+  def update
+    @order = Order.find(params[:id])
+    @order.update_attributes(order_params)
+    redirect_to orders_path
+  end 
+
+  def destroy
+    @order = Order.find(params[:id])
+    @order.destroy
+    redirect_to orders_path
+
+  end
+
   def create
     @order = current_user.orders.create(order_params)
     
-      
+
         # Amount in cents
-   
-  @amount = (@order.price * 100).to_i 
-  
 
-    customer = Stripe::Customer.create(
-      email: params[:stripeEmail],
-      source: params[:stripeToken]
-    )
+        @amount = (@order.price * 100).to_i 
 
-    charge = Stripe::Charge.create(
-      customer: customer.id,
-      amount: @amount,
-      description: 'Rails Stripe customer',
-      currency: 'usd'
-    )
-   
-    redirect_to order_path(@order)
 
-  rescue Stripe::CardError => e
-    flash[:error] = e.message
-    redirect_to root_path
-    
-  end
+        customer = Stripe::Customer.create(
+          email: params[:stripeEmail],
+          source: params[:stripeToken]
+          )
 
-  private 
+        charge = Stripe::Charge.create(
+          customer: customer.id,
+          amount: @amount,
+          description: 'Rails Stripe customer',
+          currency: 'usd'
+          )
 
-  def order_params
-    params.require(:order).permit(:first_name, :last_name, :item, :size, :quantity, :color, :description, :cost)
+        redirect_to order_path(@order)
 
-  end
+      rescue Stripe::CardError => e
+        flash[:error] = e.message
+        redirect_to root_path
 
-end
+      end
+
+      private 
+
+      def order_params
+        params.require(:order).permit(:first_name, :last_name, :item, :size, :quantity, :color, :description, :cost)
+
+      end
+
+    end

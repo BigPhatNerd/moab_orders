@@ -1,6 +1,6 @@
 <br />
-<div class="booyah-box col-10 offset-1">
-    <h1 class="text-center">Thank You for Your Order! </h1>
+<div class="booyah-box  show-box col-10 offset-1">
+    <h1 class="text-center thanks">Thank You for Your Order! </h1>
     <div class="col-10 offset-1">
         <h2> Name:
             <%= @order.first_name %>
@@ -34,3 +34,9 @@
             </span>
         </h2>
     </div>
+    <br />
+    <div class="col-12 text-center">
+        <%= link_to 'Homepage', root_path, class: 'btn btn-primary btn-large' %>
+    </div>
+    <br />
+</div>

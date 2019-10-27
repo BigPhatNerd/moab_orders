@@ -1,4 +1,12 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Share+Tech&display=swap');
+
+h1,
+h2,
+h3,
+p {
+    font-family: 'Share Tech', sans-serif;
+}
 
 .booyah-box {
     -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -45,5 +53,102 @@
 }
 
 .navbar {
-    background-color: grey;
+    background-color: white;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-toggler {
+    color: rgb(177, 1, 92);
+}
+
+.navbar-light .navbar-toggler {
+    border-color: rgba(199, 22, 22, 0.1);
+
+}
+
+.string,
+.select,
+.integer {
+    font-family: 'Share Tech', sans-serif;
+    font-size: 28px;
+}
+
+.form-control {
+    border: 2px solid;
+    border-color: black;
+}
+
+.orders {
+    font-size: 45px;
+    text-decoration: underline;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-toggler {
+    font-family: 'Share Tech', sans-serif;
+    font-size: 28px
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+    color: #b1015c;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 24px
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #b1015c;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 20px;
+}
+
+.home-box {
+    margin-top: 170px;
+}
+
+.btn-primary {
+    width: 200px;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 24px;
+    border-color: white;
+
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: #0275d8;
+}
+
+#test {
+    font-size: 42px;
+}
+
+select.form-control:not([size]):not([multiple]) {
+    height: calc(3.25rem + 2px);
+}
+
+.show-box {
+    margin-top: 120px;
+}
+
+.thanks {
+    text-decoration: underline;
+    text-decoration: bold;
+}
+
+.underline {
+    border-bottom: 2px solid white;
+    width: 100%;
+    right: 0;
+    position: absolute;
+    padding: 0 1.5rem;
+
+}
+
+.margin-index {
+    margin-top: 20px;
+}
+
+.smaller,
+h3 {
+    font-size: 20px;
 }
