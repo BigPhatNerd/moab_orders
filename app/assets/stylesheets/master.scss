@@ -114,7 +114,7 @@ a {
 }
 
 .home-box {
-    margin-top: 170px;
+    margin-top: 50px;
 }
 
 .btn-primary {
@@ -140,6 +140,7 @@ a {
 .cash.btn.btn-primary.btn-large:hover {
     background-color: white;
     color: #0275d8;
+    width: 261px;
 }
 
 #test {
@@ -194,7 +195,7 @@ select.form-control:not([size]):not([multiple]) {
     }
 
     #show-when-small {
-        visibility: hidden;
+        display: none;
     }
 
     #hide-when-small {
@@ -208,7 +209,7 @@ select.form-control:not([size]):not([multiple]) {
     }
 
     #show-when-small {
-        visibility: hidden;
+        display: none;
     }
 
     #hide {
