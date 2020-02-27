@@ -228,3 +228,9 @@ select.form-control:not([size]):not([multiple]) {
         font-size: 30px;
     }
 }
+
+img.img-responsive {
+    width: 100%;
+    height: auto;
+    padding: 1%;
+}

@@ -6,10 +6,10 @@
     <%= simple_form_for @order, url: order_path do |f| %>
     <%= f.input :first_name %>
     <%= f.input :last_name %>
-    <%= f.input :item, :collection => ["jacket $30", "shirt $20", "pullover $50"]%>
+    <%= f.input :item, :collection => ["jacket $35", "vest $35"]%>
     <%= f.input :quantity %>
-    <%= f.input :size, :collection =>%w[XS S M L XL XXL] %>
-    <%= f.input :color, :collection => %w[red yellow blue grey] %>
+    <%= f.input :size, :collection =>%w[S M L XL XXL 3XL 4XL 5XL 6XL] %>
+    <%= f.input :color, :collection => ["black", "navy* (Must be RN or MD to order navy)"] %>
     <%= f.input :cost, :as => :hidden, input_html: {id: "order_cost"} %>
     <%= f.submit "Update", class: 'btn btn-primary btn-large' %>
     <p id="test">

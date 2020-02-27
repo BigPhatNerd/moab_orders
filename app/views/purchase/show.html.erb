@@ -9,19 +9,14 @@
     <div id="hide-when-small">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-2">
+                <div class="col-1">
                     <h3 class="index-size">
                         Item
                     </h3>
                 </div>
-                <div class="col-2">
-                    <h3 class="index-size">
-                        Color
-                    </h3>
-                </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        XS
+                        Color
                     </h3>
                 </div>
                 <div class="col-1">
@@ -46,59 +41,27 @@
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        XXL
+                        2XL
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        XXXL
-                    </h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-2">
-                    <h3 class="index-size">
-                        Shirts
-                    </h3>
-                </div>
-                <div class="col-2">
-                    <h3 class="index-size">
-                        Red
+                        3XL
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "XS", color: "red").count %>
+                        4XL
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "S", color: "red").count %>
+                        5XL
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "M", color: "red").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "L", color: "red").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "XL", color: "red").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "XXL", color: "red").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "XXXL", color: "red").count %>
+                        6XL
                     </h3>
                 </div>
             </div>
@@ -106,48 +69,59 @@
             </div>
             <br />
             <div class="row">
-                <div class="col-2">
+                <div class="col-1">
                     <h3 class="index-size">
-                    </h3>
-                </div>
-                <div class="col-2">
-                    <h3 class="index-size">
-                        Yellow
+                        Vests
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "XS", color: "yellow").count %>
+                        Black
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "S", color: "yellow").count %>
+                        <%= Order.smallBlackVest %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "M", color: "yellow").count %>
+                        <%= Order.mediumBlackVest %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "L", color: "yellow").count %>
+                        <%= Order.largeBlackVest %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "XL", color: "yellow").count %>
+                        <%= Order.xlBlackVest %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "XXL", color: "yellow").count %>
+                        <%= Order.twoXLBlackVest %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "XXXL", color: "yellow").count %>
+                        <%= Order.threeXLBlackVest %>
+                    </h3>
+                </div>
+                <div class="col-1">
+                    <h3 class="index-size">
+                        <%= Order.fourXLBlackVest %>
+                    </h3>
+                </div>
+                <div class="col-1">
+                    <h3 class="index-size">
+                        <%= Order.fiveXLBlackVest %>
+                    </h3>
+                </div>
+                <div class="col-1">
+                    <h3 class="index-size">
+                        <%= Order.sixXLBlackVest %>
                     </h3>
                 </div>
             </div>
@@ -155,48 +129,58 @@
             </div>
             <br />
             <div class="row">
-                <div class="col-2">
+                <div class="col-1">
                     <h3 class="index-size">
-                    </h3>
-                </div>
-                <div class="col-2">
-                    <h3 class="index-size">
-                        Blue
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "XS", color: "blue").count %>
+                        Navy
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "S", color: "blue").count %>
+                        <%= Order.smallNavyVest %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "M", color: "blue").count %>
+                        <%= Order.medNavyVest %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "L", color: "blue").count %>
+                        <%= Order.largeNavyVest %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "XL", color: "blue").count %>
+                        <%= Order.xlNavyVest %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "XXL", color: "blue").count %>
+                        <%= Order.twoXLNavyVest %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "XXXL", color: "blue").count %>
+                        <%= Order.threeXLNavyVest %>
+                    </h3>
+                </div>
+                <div class="col-1">
+                    <h3 class="index-size">
+                        <%= Order.fourXLNavyVest %>
+                    </h3>
+                </div>
+                <div class="col-1">
+                    <h3 class="index-size">
+                        <%= Order.fiveXLNavyVest %>
+                    </h3>
+                </div>
+                <div class="col-1">
+                    <h3 class="index-size">
+                        <%= Order.sixXLNavyVest %>
                     </h3>
                 </div>
             </div>
@@ -204,98 +188,59 @@
             </div>
             <br />
             <div class="row">
-                <div class="col-2">
-                    <h3 class="index-size">
-                    </h3>
-                </div>
-                <div class="col-2">
-                    <h3 class="index-size">
-                        Grey
-                    </h3>
-                </div>
                 <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "XS", color: "grey").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "S", color: "grey").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "M", color: "grey").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "L", color: "grey").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "XL", color: "grey").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "XXL", color: "grey").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "shirt $20",size: "XXXL", color: "grey").count %>
-                    </h3>
-                </div>
-            </div>
-            <div class="underline">
-            </div>
-            <br />
-            <div class="row">
-                <div class="col-2">
                     <h3 class="index-size">
                         Jackets
                     </h3>
                 </div>
-                <div class="col-2">
+                <div class="col-1">
                     <h3 class="index-size">
-                        Red
+                        Black
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "XS", color: "red").count %>
+                        <%= Order.smallBlackJacket %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "S", color: "red").count %>
+                        <%= Order.mediumBlackJacket %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "M", color: "red").count %>
+                        <%= Order.largeBlackJacket %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "L", color: "red").count %>
+                        <%= Order.xlBlackJacket %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "XL", color: "red").count %>
+                        <%= Order.twoXLBlackJacket %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "XXL", color: "red").count %>
+                        <%= Order.threeXLBlackJacket %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "XXXL", color: "red").count %>
+                        <%= Order.fourXLBlackJacket %>
+                    </h3>
+                </div>
+                <div class="col-1">
+                    <h3 class="index-size">
+                        <%= Order.fiveXLBlackJacket %>
+                    </h3>
+                </div>
+                <div class="col-1">
+                    <h3 class="index-size">
+                        <%= Order.sixXLBlackJacket %>
                     </h3>
                 </div>
             </div>
@@ -303,343 +248,58 @@
             </div>
             <br />
             <div class="row">
-                <div class="col-2">
+                <div class="col-1">
                     <h3 class="index-size">
-                    </h3>
-                </div>
-                <div class="col-2">
-                    <h3 class="index-size">
-                        Yellow
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "XS", color: "yellow").count %>
+                        Navy
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "S", color: "yellow").count %>
+                        <%= Order.smallNavyJacket %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "M", color: "yellow").count %>
+                        <%= Order.mediumNavyJacket %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "L", color: "yellow").count %>
+                        <%= Order.largeNavyJacket %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "XL", color: "yellow").count %>
+                        <%= Order.xlNavyJacket %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "XXL", color: "yellow").count %>
+                        <%= Order.twoXLNavyJacket %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "XXXL", color: "yellow").count %>
-                    </h3>
-                </div>
-            </div>
-            <div class="underline">
-            </div>
-            <br />
-            <div class="row">
-                <div class="col-2">
-                    <h3 class="index-size">
-                    </h3>
-                </div>
-                <div class="col-2">
-                    <h3 class="index-size">
-                        Blue
+                        <%= Order.threeXLNavyJacket %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "XS", color: "blue").count %>
+                        <%= Order.fourXLNavyJacket %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "S", color: "blue").count %>
+                        <%= Order.fiveXLNavyJacket %>
                     </h3>
                 </div>
                 <div class="col-1">
                     <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "M", color: "blue").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "L", color: "blue").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "XL", color: "blue").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "XXL", color: "blue").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "XXXL", color: "blue").count %>
-                    </h3>
-                </div>
-            </div>
-            <div class="underline">
-            </div>
-            <br />
-            <div class="row">
-                <div class="col-2">
-                    <h3 class="index-size">
-                    </h3>
-                </div>
-                <div class="col-2">
-                    <h3 class="index-size">
-                        Grey
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "XS", color: "grey").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "S", color: "grey").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "M", color: "grey").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "L", color: "grey").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "XL", color: "grey").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "XXL", color: "grey").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "jacket $30",size: "XXXL", color: "grey").count %>
-                    </h3>
-                </div>
-            </div>
-            <div class="underline">
-            </div>
-            <br />
-            <div class="row">
-                <div class="col-2">
-                    <h3 class="index-size">
-                        Pullovers
-                    </h3>
-                </div>
-                <div class="col-2">
-                    <h3 class="index-size">
-                        Red
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "XS", color: "red").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "S", color: "red").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "M", color: "red").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "L", color: "red").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "XL", color: "red").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "XXL", color: "red").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "XXXL", color: "red").count %>
-                    </h3>
-                </div>
-            </div>
-            <div class="underline">
-            </div>
-            <br />
-            <div class="row">
-                <div class="col-2">
-                    <h3 class="index-size">
-                    </h3>
-                </div>
-                <div class="col-2">
-                    <h3 class="index-size">
-                        Yellow
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "XS", color: "yellow").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "S", color: "yellow").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "M", color: "yellow").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "L", color: "yellow").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "XL", color: "yellow").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "XXL", color: "yellow").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "XXXL", color: "yellow").count %>
-                    </h3>
-                </div>
-            </div>
-            <div class="underline">
-            </div>
-            <br />
-            <div class="row">
-                <div class="col-2">
-                    <h3 class="index-size">
-                    </h3>
-                </div>
-                <div class="col-2">
-                    <h3 class="index-size">
-                        Blue
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "XS", color: "blue").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "S", color: "blue").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "M", color: "blue").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "L", color: "blue").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "XL", color: "blue").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "XXL", color: "blue").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "XXXL", color: "blue").count %>
-                    </h3>
-                </div>
-            </div>
-            <div class="underline">
-            </div>
-            <br />
-            <div class="row">
-                <div class="col-2">
-                    <h3 class="index-size">
-                    </h3>
-                </div>
-                <div class="col-2">
-                    <h3 class="index-size">
-                        Grey
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "XS", color: "grey").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "S", color: "grey").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "M", color: "grey").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "L", color: "grey").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "XL", color: "grey").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "XXL", color: "grey").count %>
-                    </h3>
-                </div>
-                <div class="col-1">
-                    <h3 class="index-size">
-                        <%= Order.where(item: "pullover $50",size: "XXXL", color: "grey").count %>
+                        <%= Order.sixXLNavyJacket %>
                     </h3>
                 </div>
             </div>
