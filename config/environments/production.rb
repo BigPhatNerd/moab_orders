@@ -12,15 +12,14 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'mob-orders.herokuapp.com'}
 
-ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings = {
- address: ‘smtp.sendgrid.net’,
- port: “25”,
- domain: ‘heroku.com’,
- user_name: ENV[“SENDGRID_USERNAME”],
- password: ENV[“SENDGRID_PASSWORD”],
- authentication: ‘plain’,
- enable_starttls_auto: true
+  :user_name            => ENV['SENDGRID_USERNAME'],
+  :password             => ENV['SENDGRID_PASSWORD'],
+  :address              => "smtp.sendgrid.net",
+  :port                 => 587,
+  :enable_starttls_auto => true,
+  :authentication       => :plain,
+  :domain               => "mob-orders.herokuapp.com"
 }
 
   # Full error reports are disabled and caching is turned on.
