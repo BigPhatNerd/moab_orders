@@ -29,7 +29,7 @@ class Order < ApplicationRecord
 
 	def self.smallBlackVest
 		count = 0
-		Order.where(item: "vest $35",size: "S", color: "black").each do |order|
+		Order.where(item: "vest $35",size: "S", color: "black", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -38,7 +38,7 @@ class Order < ApplicationRecord
 
 	def self.mediumBlackVest
 		count = 0
-		Order.where(item: "vest $35",size: "M", color: "black").each do |order|
+		Order.where(item: "vest $35",size: "M", color: "black", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -47,7 +47,7 @@ class Order < ApplicationRecord
 
 	def self.largeBlackVest
 		count = 0
-		Order.where(item: "vest $35",size: "L", color: "black").each do |order|
+		Order.where(item: "vest $35",size: "L", color: "black", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -55,7 +55,7 @@ class Order < ApplicationRecord
 	end
 	def self.xlBlackVest
 		count = 0
-		Order.where(item: "vest $35",size: "XL", color: "black").each do |order|
+		Order.where(item: "vest $35",size: "XL", color: "black", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -65,7 +65,7 @@ class Order < ApplicationRecord
 
 	def self.twoXLBlackVest
 		count = 0
-		Order.where(item: "vest $35",size: "2XL", color: "black").each do |order|
+		Order.where(item: "vest $35",size: "2XL", color: "black", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -74,7 +74,7 @@ class Order < ApplicationRecord
 
 	def self.threeXLBlackVest
 		count = 0
-		Order.where(item: "vest $35",size: "3XL", color: "black").each do |order|
+		Order.where(item: "vest $35",size: "3XL", color: "black", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -83,7 +83,7 @@ class Order < ApplicationRecord
 
 	def self.fourXLBlackVest
 		count = 0
-		Order.where(item: "vest $35",size: "4XL", color: "black").each do |order|
+		Order.where(item: "vest $35",size: "4XL", color: "black", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -92,7 +92,7 @@ class Order < ApplicationRecord
 
 	def self.fiveXLBlackVest
 		count = 0
-		Order.where(item: "vest $35",size: "5XL", color: "black").each do |order|
+		Order.where(item: "vest $35",size: "5XL", color: "black", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -102,7 +102,7 @@ class Order < ApplicationRecord
 
 	def self.sixXLBlackVest
 		count = 0
-		Order.where(item: "vest $35",size: "6XL", color: "black").each do |order|
+		Order.where(item: "vest $35",size: "6XL", color: "black", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -111,7 +111,7 @@ class Order < ApplicationRecord
 
 	def self.smallNavyVest
 		count = 0
-		Order.where(item: "vest $35",size: "S", color: "navy* (Must be RN or MD to order navy)").each do |order|
+		Order.where(item: "vest $35",size: "S", color: "navy* (Must be RN or MD to order navy)", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -120,7 +120,7 @@ class Order < ApplicationRecord
 
 	def self.medNavyVest
 		count = 0
-		Order.where(item: "vest $35",size: "M", color: "navy* (Must be RN or MD to order navy)").each do |order|
+		Order.where(item: "vest $35",size: "M", color: "navy* (Must be RN or MD to order navy)", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -129,7 +129,7 @@ class Order < ApplicationRecord
 
 	def self.largeNavyVest
 		count = 0
-		Order.where(item: "vest $35",size: "L", color: "navy* (Must be RN or MD to order navy)").each do |order|
+		Order.where(item: "vest $35",size: "L", color: "navy* (Must be RN or MD to order navy)", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -138,7 +138,7 @@ class Order < ApplicationRecord
 
 	def self.xlNavyVest
 		count = 0
-		Order.where(item: "vest $35",size: "XL", color: "navy* (Must be RN or MD to order navy)").each do |order|
+		Order.where(item: "vest $35",size: "XL", color: "navy* (Must be RN or MD to order navy)", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -147,7 +147,7 @@ class Order < ApplicationRecord
 
 	def self.twoXLNavyVest
 		count = 0
-		Order.where(item: "vest $35",size: "2XL", color: "navy* (Must be RN or MD to order navy)").each do |order|
+		Order.where(item: "vest $35",size: "2XL", color: "navy* (Must be RN or MD to order navy)", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -156,7 +156,7 @@ class Order < ApplicationRecord
 
 	def self.threeXLNavyVest
 		count = 0
-		Order.where(item: "vest $35",size: "3XL", color: "navy* (Must be RN or MD to order navy)").each do |order|
+		Order.where(item: "vest $35",size: "3XL", color: "navy* (Must be RN or MD to order navy)", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -165,7 +165,7 @@ class Order < ApplicationRecord
 
 	def self.fourXLNavyVest
 		count = 0
-		Order.where(item: "vest $35",size: "4XL", color: "navy* (Must be RN or MD to order navy)").each do |order|
+		Order.where(item: "vest $35",size: "4XL", color: "navy* (Must be RN or MD to order navy)", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -174,7 +174,7 @@ class Order < ApplicationRecord
 
 	def self.fiveXLNavyVest
 		count = 0
-		Order.where(item: "vest $35",size: "5XL", color: "navy* (Must be RN or MD to order navy)").each do |order|
+		Order.where(item: "vest $35",size: "5XL", color: "navy* (Must be RN or MD to order navy)", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -183,7 +183,7 @@ class Order < ApplicationRecord
 
 	def self.sixXLNavyVest
 		count = 0
-		Order.where(item: "vest $35",size: "6XL", color: "navy* (Must be RN or MD to order navy)").each do |order|
+		Order.where(item: "vest $35",size: "6XL", color: "navy* (Must be RN or MD to order navy)", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -192,7 +192,7 @@ class Order < ApplicationRecord
 
 	def self.smallBlackJacket
 		count = 0
-		Order.where(item: "jacket $35",size: "S", color: "black").each do |order|
+		Order.where(item: "jacket $35",size: "S", color: "black", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -201,7 +201,7 @@ class Order < ApplicationRecord
 
 	def self.mediumBlackJacket
 		count = 0
-		Order.where(item: "jacket $35",size: "M", color: "black").each do |order|
+		Order.where(item: "jacket $35",size: "M", color: "black", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -210,7 +210,7 @@ class Order < ApplicationRecord
 
 def self.largeBlackJacket
 	count = 0
-	Order.where(item: "jacket $35",size: "L", color: "black").each do |order|
+	Order.where(item: "jacket $35",size: "L", color: "black", description: "Men's").each do |order|
 		count += order.quantity
 
 		end
@@ -219,7 +219,7 @@ def self.largeBlackJacket
 
 	def self.xlBlackJacket
 		count = 0
-Order.where(item: "jacket $35",size: "XL", color: "black").each do |order|
+Order.where(item: "jacket $35",size: "XL", color: "black", description: "Men's").each do |order|
 	count += order.quantity
 
 		end
@@ -228,7 +228,7 @@ Order.where(item: "jacket $35",size: "XL", color: "black").each do |order|
 
 def self.twoXLBlackJacket
 	count = 0
-	Order.where(item: "jacket $35",size: "2XL", color: "black").each do |order|
+	Order.where(item: "jacket $35",size: "2XL", color: "black", description: "Men's").each do |order|
 		count += order.quantity
 
 		end
@@ -237,7 +237,7 @@ end
 
 def self.threeXLBlackJacket
 	count = 0
-Order.where(item: "jacket $35",size: "3XL", color: "black").each do |order|
+Order.where(item: "jacket $35",size: "3XL", color: "black", description: "Men's").each do |order|
 	count += order.quantity
 
 		end
@@ -246,7 +246,7 @@ Order.where(item: "jacket $35",size: "3XL", color: "black").each do |order|
 
 	def self.fourXLBlackJacket
 		count = 0
-Order.where(item: "jacket $35",size: "4XL", color: "black").each do |order|
+Order.where(item: "jacket $35",size: "4XL", color: "black", description: "Men's").each do |order|
 	count += order.quantity
 
 		end
@@ -255,7 +255,7 @@ Order.where(item: "jacket $35",size: "4XL", color: "black").each do |order|
 
 	def self.fiveXLBlackJacket
 		count = 0
-Order.where(item: "jacket $35",size: "5XL", color: "black").each do |order|
+Order.where(item: "jacket $35",size: "5XL", color: "black", description: "Men's").each do |order|
 	count += order.quantity
 
 		end
@@ -264,7 +264,7 @@ Order.where(item: "jacket $35",size: "5XL", color: "black").each do |order|
 
 	def self.sixXLBlackJacket
 		count = 0
-Order.where(item: "jacket $35",size: "6XL", color: "black").each do |order|
+Order.where(item: "jacket $35",size: "6XL", color: "black", description: "Men's").each do |order|
 	count += order.quantity
 
 		end
@@ -273,7 +273,7 @@ Order.where(item: "jacket $35",size: "6XL", color: "black").each do |order|
 
 	def self.smallNavyJacket
 		count = 0
-		Order.where(item: "jacket $35",size: "S", color: "navy* (Must be RN or MD to order navy)").each do |order|
+		Order.where(item: "jacket $35",size: "S", color: "navy* (Must be RN or MD to order navy)", description: "Men's").each do |order|
 			count += order.quantity
 
 		end
@@ -282,7 +282,7 @@ Order.where(item: "jacket $35",size: "6XL", color: "black").each do |order|
 
 	def self.mediumNavyJacket
 		count = 0
-Order.where(item: "jacket $35",size: "M", color: "navy* (Must be RN or MD to order navy)").each do |order|
+Order.where(item: "jacket $35",size: "M", color: "navy* (Must be RN or MD to order navy)", description: "Men's").each do |order|
 	count += order.quantity
 
 		end
@@ -291,7 +291,7 @@ Order.where(item: "jacket $35",size: "M", color: "navy* (Must be RN or MD to ord
 
 	def self.largeNavyJacket
 		count = 0
-Order.where(item: "jacket $35",size: "L", color: "navy* (Must be RN or MD to order navy)").each do |order|
+Order.where(item: "jacket $35",size: "L", color: "navy* (Must be RN or MD to order navy)", description: "Men's").each do |order|
 	count += order.quantity
 
 		end
@@ -300,7 +300,7 @@ Order.where(item: "jacket $35",size: "L", color: "navy* (Must be RN or MD to ord
 
 	def self.xlNavyJacket
 		count = 0
-Order.where(item: "jacket $35",size: "XL", color: "navy* (Must be RN or MD to order navy)").each do |order|
+Order.where(item: "jacket $35",size: "XL", color: "navy* (Must be RN or MD to order navy)", description: "Men's").each do |order|
 	count += order.quantity
 
 		end
@@ -309,7 +309,7 @@ Order.where(item: "jacket $35",size: "XL", color: "navy* (Must be RN or MD to or
 
 	def self.twoXLNavyJacket
 		count = 0
-Order.where(item: "jacket $35",size: "2XL", color: "navy* (Must be RN or MD to order navy)").each do |order|
+Order.where(item: "jacket $35",size: "2XL", color: "navy* (Must be RN or MD to order navy)", description: "Men's").each do |order|
 	count += order.quantity
 
 		end
@@ -318,7 +318,7 @@ Order.where(item: "jacket $35",size: "2XL", color: "navy* (Must be RN or MD to o
 
 	def self.threeXLNavyJacket
 		count = 0
-Order.where(item: "jacket $35",size: "3XL", color: "navy* (Must be RN or MD to order navy)").each do |order|
+Order.where(item: "jacket $35",size: "3XL", color: "navy* (Must be RN or MD to order navy)", description: "Men's").each do |order|
 	count += order.quantity
 
 		end
@@ -327,7 +327,7 @@ Order.where(item: "jacket $35",size: "3XL", color: "navy* (Must be RN or MD to o
 
 	def self.fourXLNavyJacket
 		count = 0
-Order.where(item: "jacket $35",size: "4XL", color: "navy* (Must be RN or MD to order navy)").each do |order|
+Order.where(item: "jacket $35",size: "4XL", color: "navy* (Must be RN or MD to order navy)", description: "Men's").each do |order|
 	count += order.quantity
 
 		end
@@ -336,7 +336,7 @@ Order.where(item: "jacket $35",size: "4XL", color: "navy* (Must be RN or MD to o
 
 	def self.fiveXLNavyJacket
 		count = 0
-Order.where(item: "jacket $35",size: "5XL", color: "navy* (Must be RN or MD to order navy)").each do |order|
+Order.where(item: "jacket $35",size: "5XL", color: "navy* (Must be RN or MD to order navy)", description: "Men's").each do |order|
 	count += order.quantity
 
 		end
@@ -345,11 +345,303 @@ Order.where(item: "jacket $35",size: "5XL", color: "navy* (Must be RN or MD to o
 
 	def self.sixXLNavyJacket
 		count = 0
-Order.where(item: "jacket $35",size: "6XL", color: "navy* (Must be RN or MD to order navy)").each do |order|
+Order.where(item: "jacket $35",size: "6XL", color: "navy* (Must be RN or MD to order navy)", description: "Men's").each do |order|
 	count += order.quantity
 
 		end
 		return count
 	end
+	###############################################################
+
+def self.ladiesxsmallBlackVest
+		count = 0
+		Order.where(item: "vest $35",size: "XS", color: "black", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+	end
+		def self.ladiessmallBlackVest
+		count = 0
+		Order.where(item: "vest $35",size: "S", color: "black", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladiesmediumBlackVest
+		count = 0
+		Order.where(item: "vest $35",size: "M", color: "black", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladieslargeBlackVest
+		count = 0
+		Order.where(item: "vest $35",size: "L", color: "black", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+	end
+	def self.ladiesxlBlackVest
+		count = 0
+		Order.where(item: "vest $35",size: "XL", color: "black", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+
+	end
+
+	def self.ladiestwoXLBlackVest
+		count = 0
+		Order.where(item: "vest $35",size: "2XL", color: "black", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladiesthreeXLBlackVest
+		count = 0
+		Order.where(item: "vest $35",size: "3XL", color: "black", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladiesfourXLBlackVest
+		count = 0
+		Order.where(item: "vest $35",size: "4XL", color: "black", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+	end
+
+	
+def self.ladiesxsmallNavyVest
+		count = 0
+		Order.where(item: "vest $35",size: "XS", color: "navy* (Must be RN or MD to order navy)", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladiessmallNavyVest
+		count = 0
+		Order.where(item: "vest $35",size: "S", color: "navy* (Must be RN or MD to order navy)", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladiesmedNavyVest
+		count = 0
+		Order.where(item: "vest $35",size: "M", color: "navy* (Must be RN or MD to order navy)", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladieslargeNavyVest
+		count = 0
+		Order.where(item: "vest $35",size: "L", color: "navy* (Must be RN or MD to order navy)", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladiesxlNavyVest
+		count = 0
+		Order.where(item: "vest $35",size: "XL", color: "navy* (Must be RN or MD to order navy)", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count	
+	end
+
+	def self.ladiestwoXLNavyVest
+		count = 0
+		Order.where(item: "vest $35",size: "2XL", color: "navy* (Must be RN or MD to order navy)", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladiesthreeXLNavyVest
+		count = 0
+		Order.where(item: "vest $35",size: "3XL", color: "navy* (Must be RN or MD to order navy)", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladiesfourXLNavyVest
+		count = 0
+		Order.where(item: "vest $35",size: "4XL", color: "navy* (Must be RN or MD to order navy)", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladiesxsmallBlackJacket
+		count = 0
+		Order.where(item: "jacket $35",size: "XS", color: "black", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladiessmallBlackJacket
+		count = 0
+		Order.where(item: "jacket $35",size: "S", color: "black", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladiesmediumBlackJacket
+		count = 0
+		Order.where(item: "jacket $35",size: "M", color: "black", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+	end
+
+def self.ladieslargeBlackJacket
+	count = 0
+	Order.where(item: "jacket $35",size: "L", color: "black", description: "Women's").each do |order|
+		count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladiesxlBlackJacket
+		count = 0
+Order.where(item: "jacket $35",size: "XL", color: "black", description: "Women's").each do |order|
+	count += order.quantity
+
+		end
+		return count
+	end
+
+def self.ladiestwoXLBlackJacket
+	count = 0
+	Order.where(item: "jacket $35",size: "2XL", color: "black", description: "Women's").each do |order|
+		count += order.quantity
+
+		end
+		return count
+end
+
+def self.ladiesthreeXLBlackJacket
+	count = 0
+Order.where(item: "jacket $35",size: "3XL", color: "black", description: "Women's").each do |order|
+	count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladiesfourXLBlackJacket
+		count = 0
+Order.where(item: "jacket $35",size: "4XL", color: "black", description: "Women's").each do |order|
+	count += order.quantity
+
+		end
+		return count
+	end
+
+	
+def self.ladiesxsmallNavyJacket
+		count = 0
+		Order.where(item: "jacket $35",size: "XS", color: "navy* (Must be RN or MD to order navy)", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladiessmallNavyJacket
+		count = 0
+		Order.where(item: "jacket $35",size: "S", color: "navy* (Must be RN or MD to order navy)", description: "Women's").each do |order|
+			count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladiesmediumNavyJacket
+		count = 0
+Order.where(item: "jacket $35",size: "M", color: "navy* (Must be RN or MD to order navy)", description: "Women's").each do |order|
+	count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladieslargeNavyJacket
+		count = 0
+Order.where(item: "jacket $35",size: "L", color: "navy* (Must be RN or MD to order navy)", description: "Women's").each do |order|
+	count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladiesxlNavyJacket
+		count = 0
+Order.where(item: "jacket $35",size: "XL", color: "navy* (Must be RN or MD to order navy)", description: "Women's").each do |order|
+	count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladiestwoXLNavyJacket
+		count = 0
+Order.where(item: "jacket $35",size: "2XL", color: "navy* (Must be RN or MD to order navy)", description: "Women's").each do |order|
+	count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladiesthreeXLNavyJacket
+		count = 0
+Order.where(item: "jacket $35",size: "3XL", color: "navy* (Must be RN or MD to order navy)", description: "Women's").each do |order|
+	count += order.quantity
+
+		end
+		return count
+	end
+
+	def self.ladiesfourXLNavyJacket
+		count = 0
+Order.where(item: "jacket $35",size: "4XL", color: "navy* (Must be RN or MD to order navy)", description: "Women's").each do |order|
+	count += order.quantity
+
+		end
+		return count
+	end
+
+	
 	
 end

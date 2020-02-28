@@ -4,12 +4,18 @@
 <div class=" text-center booyah-box col-10 offset-1">
     <h1 class="orders"> Orders</h1>
     <%= simple_form_for @order, url: orders_path do |f| %>
-    <%= f.input :first_name %>
-    <%= f.input :last_name %>
-    <%= f.input :item, :collection => ["vest $35", "jacket $35"]%>
-    <%= f.input :quantity %>
-    <%= f.input :size, :collection =>%w[S M L XL 2XL 3XL 4XL 5XL 6XL ] %>
-    <%= f.input :color, :collection => ["black", "navy* (Must be RN or MD to order navy)"] %>
+    <%= f.input :first_name, required: true %>
+    <%= f.input :last_name, required: true %>
+    <%= f.input :item, required: true, :collection => ["vest $35", "jacket $35"]%>
+    <%= f.input :description, required: true, :collection => ["Men's", "Women's"] %>
+    <%= f.input :quantity, required: true %>
+    <div id="mens_sizes" style="display: none">
+        <%= f.input :size, disabled: true, input_html: {id: :mens}, :collection =>%w[S M L XL 2XL 3XL 4XL 5XL 6XL ] %>
+    </div>
+    <div id="womens_sizes" style="display: none">
+        <%= f.input :size, disabled: true, input_html: {id: :womens},:collection =>%w[XS S M L XL 2XL 3XL 4XL  ] %>
+    </div>
+    <%= f.input :color, required: true, :collection => ["black", "navy* (Must be RN or MD to order navy)"] %>
     <%= f.input :cost, :as => :hidden, input_html: {id: "order_cost"} %>
     <p id="test">
     </p>

@@ -1,5 +1,28 @@
 $(document).on('turbolinks:load', function() {
+
+
     $(function() {
+
+
+        $('#order_description').change(function() {
+            var style = $('#order_description').val();
+            if (style === "Men's") {
+                $('#mens_sizes').show();
+                $('#womens_sizes').hide();
+                $('#mens').removeAttr("disabled");
+                $('#womens').attr("disabled", "disabled");
+            } else if (style === "Women's") {
+                $('#womens_sizes').show();
+                $('#mens_sizes').hide();
+                $('#womens').removeAttr("disabled");
+                $('#mens').attr("disabled", "disabled");
+
+            }
+
+        })
+
+
+
         var prices, cost, qty, whatever
         $('#order_item').change(function() {
             prices = ($(this).val());
