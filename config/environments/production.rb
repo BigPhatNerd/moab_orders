@@ -10,7 +10,7 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
-  config.action_mailer.default_url_options = { host: 'mob-orders.herokuapp.com'}
+  config.action_mailer.default_url_options = { host: 'https://mob-orders.herokuapp.com/'}
 
 ActionMailer::Base.smtp_settings = {
   :user_name            => ENV['SENDGRID_USERNAME'],
