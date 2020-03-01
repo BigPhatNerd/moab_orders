@@ -75,6 +75,8 @@ gem 'figaro'
 gem 'jquery-turbolinks'
 gem 'font-awesome-rails'
 gem 'sendgrid-ruby'
+gem 'chartkick'
+
 
 
 #

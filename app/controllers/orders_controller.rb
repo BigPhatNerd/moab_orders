@@ -4,6 +4,7 @@ class OrdersController < ApplicationController
 
   def index
     @orders = Order.all
+     @department = Order.where(department: Order.pluck(:department))
 
   end
   def purchase
@@ -15,6 +16,7 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    @department = Order.where(department: Order.pluck(:department))
   end
 
   def edit 
@@ -76,7 +78,7 @@ return
     private 
 
     def order_params
-      params.require(:order).permit(:first_name, :last_name, :item, :size, :quantity, :color, :description, :cost)
+      params.require(:order).permit(:first_name, :last_name, :item, :size, :quantity, :color, :description, :cost, :department)
 
     end
     def current_order

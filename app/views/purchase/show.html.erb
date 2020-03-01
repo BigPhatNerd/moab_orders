@@ -8,6 +8,12 @@
     </div>
     <div id="hide-when-small">
         <div class="container-fluid">
+            <% @departments.each do |department| %>
+            <h1 class="text-center">
+                <%= department.department %>
+               
+            </h1>
+            <br />
             <div class="row">
                 <div class="col-1">
                     <h3 class="index-size">
@@ -591,5 +597,6 @@
             <br />
             <br />
             <br />
+            <% end %>
         </div>
     </div>

@@ -6,11 +6,50 @@
     <%= simple_form_for @order, url: order_path do |f| %>
     <%= f.input :first_name %>
     <%= f.input :last_name %>
+    <%= f.input :department, :collection =>[
+"OTHER",
+"PATIENT ACCESS SERVICES",
+"CASE MANAGEMENT",
+"ECHOCARDIOGRAPHER",
+"CARDIAC CATH LAB",
+"RADIOLOGY DEPARTMENT",
+"OPERATING ROOM",
+"HOSPITALIST, N.P.",
+"HOSPITALIST",
+"ADMINISTRATION",
+"LOGISTICS SPECIALIST",
+"REHABILITATION SERVICES",
+"PHARMACY DEPARTMENT",
+"SPECIAL CARE NURSERY",
+"MED-SURG UNIT",
+"EMERGENCY DEPARTMENT",
+"LABORATORY DEPARTMENT",
+"RESPIRATORY DEPARTMENT",
+"INTENSIVE CARE UNIT",
+"SDS/PACU",
+"SAME DAY SURGERY",
+"PACU",
+"LABOR AND DELIVERY DEPARMENT",
+"METHODIST OLIVE BRANCH LOGO ONLY",
+"PBX",
+"CLINICAL NUTRITION",
+"WOUND CARE",
+"SOCIAL WORK",
+"SECURITY DEPARTMENT",
+"HUMAN RESOURCES",
+"SPIRITUAL CARE",
+"INTERNAL MEDICINE",
+"SURGICAL SERVICES",
+"CLINICAL INFORMATICS",
+"INFORMATION TECHNOLOGY",
+"SOUTHAVEN DIAGNOSTIC CENTER",
+"UNIT SECRETARY"] %>
     <%= f.input :item, :collection => ["jacket $35", "vest $35"]%>
     <%= f.input :quantity %>
-    <%= f.input :size, :collection =>%w[S M L XL XXL 3XL 4XL 5XL 6XL] %>
+    <%= f.input :description, :collection => ["Men's", "Women's"] %>
+    <%= f.input :size, :collection =>%w[XS S M L XL XXL 3XL 4XL 5XL 6XL] %>
     <%= f.input :color, :collection => ["black", "navy* (Must be RN or MD to order navy)"] %>
-    <%= f.input :cost, :as => :hidden, input_html: {id: "order_cost"} %>
+    <%= f.input :cost, input_html: {id: "order_cost"} %>
     <%= f.submit "Update", class: 'btn btn-primary btn-large' %>
     <p id="test">
     </p>

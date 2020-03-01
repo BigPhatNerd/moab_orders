@@ -10,6 +10,7 @@ class Order < ApplicationRecord
 	validates :quantity, presence: true
 	validates :color, presence: true
 	validates :cost, presence: true
+	validates :department, presence: true
 	
 	
 	def price
@@ -626,10 +627,12 @@ Order.where(item: "jacket $35",size: "2XL", color: "navy* (Must be RN or MD to o
 
 	def self.ladiesthreeXLNavyJacket
 		count = 0
+	
 Order.where(item: "jacket $35",size: "3XL", color: "navy* (Must be RN or MD to order navy)", description: "Women's").each do |order|
 	count += order.quantity
 
 		end
+	end
 		return count
 	end
 

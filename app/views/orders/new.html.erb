@@ -6,6 +6,44 @@
     <%= simple_form_for @order, url: orders_path do |f| %>
     <%= f.input :first_name, required: true %>
     <%= f.input :last_name, required: true %>
+    <%= f.input :department, :collection =>[
+"OTHER",
+"PATIENT ACCESS SERVICES",
+"CASE MANAGEMENT",
+"ECHOCARDIOGRAPHER",
+"CARDIAC CATH LAB",
+"RADIOLOGY DEPARTMENT",
+"OPERATING ROOM",
+"HOSPITALIST, N.P.",
+"HOSPITALIST",
+"ADMINISTRATION",
+"LOGISTICS SPECIALIST",
+"REHABILITATION SERVICES",
+"PHARMACY DEPARTMENT",
+"SPECIAL CARE NURSERY",
+"MED-SURG UNIT",
+"EMERGENCY DEPARTMENT",
+"LABORATORY DEPARTMENT",
+"RESPIRATORY DEPARTMENT",
+"INTENSIVE CARE UNIT",
+"SDS/PACU",
+"SAME DAY SURGERY",
+"PACU",
+"LABOR AND DELIVERY DEPARMENT",
+"METHODIST OLIVE BRANCH LOGO ONLY",
+"PBX",
+"CLINICAL NUTRITION",
+"WOUND CARE",
+"SOCIAL WORK",
+"SECURITY DEPARTMENT",
+"HUMAN RESOURCES",
+"SPIRITUAL CARE",
+"INTERNAL MEDICINE",
+"SURGICAL SERVICES",
+"CLINICAL INFORMATICS",
+"INFORMATION TECHNOLOGY",
+"SOUTHAVEN DIAGNOSTIC CENTER",
+"UNIT SECRETARY"], required: true %>
     <%= f.input :item, required: true, :collection => ["vest $35", "jacket $35"]%>
     <%= f.input :description, required: true, :collection => ["Men's", "Women's"] %>
     <%= f.input :quantity, required: true %>

@@ -16,5 +16,7 @@
 //= require turbolinks
 //= require popper
 //= require tether
+//= require chartkick
+//= require Chart.bundle
 //= require bootstrap-sprockets
 //= require_tree .
