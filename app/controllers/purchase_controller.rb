@@ -1,6 +1,43 @@
 class PurchaseController < ApplicationController
-def show
-	
-	 @departments = Order.where(department: Order.pluck(:department))
-end
+  def show
+    @departments = ["OTHER",
+                    "METHODIST OLIVE BRANCH LOGO ONLY",
+                    "PATIENT ACCESS SERVICES",
+                    "CASE MANAGEMENT",
+                    "ECHOCARDIOGRAPHER",
+                    "CARDIAC CATH LAB",
+                    "RADIOLOGY DEPARTMENT",
+                    "OPERATING ROOM",
+                    "HOSPITALIST, N.P.",
+                    "HOSPITALIST",
+                    "ADMINISTRATION",
+                    "LOGISTICS SPECIALIST",
+                    "REHABILITATION SERVICES",
+                    "PHARMACY DEPARTMENT",
+                    "SPECIAL CARE NURSERY",
+                    "MED-SURG UNIT",
+                    "EMERGENCY DEPARTMENT",
+                    "LABORATORY DEPARTMENT",
+                    "RESPIRATORY DEPARTMENT",
+                    "INTENSIVE CARE UNIT",
+                    "SDS/PACU",
+                    "SAME DAY SURGERY",
+                    "PACU",
+                    "LABOR AND DELIVERY DEPARMENT",
+                    "PBX",
+                    "CLINICAL NUTRITION",
+                    "WOUND CARE",
+                    "SOCIAL WORK",
+                    "SECURITY DEPARTMENT",
+                    "HUMAN RESOURCES",
+                    "SPIRITUAL CARE",
+                    "INTERNAL MEDICINE",
+                    "SURGICAL SERVICES",
+                    "CLINICAL INFORMATICS",
+                    "INFORMATION TECHNOLOGY",
+                    "SOUTHAVEN DIAGNOSTIC CENTER",
+                    "UNIT SECRETARY"]
+    #@departments = Order.where(department: Order.pluck(:department))
+  end
+
 end

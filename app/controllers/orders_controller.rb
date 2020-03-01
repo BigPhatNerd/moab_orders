@@ -19,16 +19,8 @@ class OrdersController < ApplicationController
     @department = Order.where(department: Order.pluck(:department))
   end
 
-  def edit 
-    @order = Order.find(params[:id])
+  
 
-  end
-
-  def update
-    @order = Order.find(params[:id])
-    @order.update_attributes(order_params)
-    redirect_to orders_path
-  end 
 
   def destroy
     @order = Order.find(params[:id])
