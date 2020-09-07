@@ -40,8 +40,9 @@ return
     if current_user && !current_user.admin?
  current_user.orders.create(order_params)
         # Amount in cents
+        @last_order = Order.last
 
-        @amount = (Order.last.cost * 100).to_i 
+        @amount = (@last_order.cost * 100).to_i 
 
 
         customer = Stripe::Customer.create(
@@ -62,7 +63,8 @@ return
 
     rescue Stripe::CardError => e
       flash[:error] = e.message
-      redirect_to root_path
+      @last_order.delete
+      # redirect_to root_path
 
     end
     
