@@ -64,7 +64,7 @@ return
     rescue Stripe::CardError => e
       flash[:error] = e.message
       @last_order.delete
-      # redirect_to root_path
+       redirect_to root_path
 
     end
     
