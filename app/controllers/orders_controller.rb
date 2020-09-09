@@ -61,11 +61,10 @@ return
 
       redirect_to order_path(Order.last.id)
 
-    rescue Stripe::CardError => e
-      flash[:error] = e.message
-      @last_order.delete
+    rescue Stripe::CardError => e 
+         flash[:error] = e.message
+      @last_order.delete     
        redirect_to root_path
-
     end
     
 
