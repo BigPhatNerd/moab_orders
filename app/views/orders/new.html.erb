@@ -7,8 +7,8 @@
     <%= f.input :first_name, required: true %>
     <%= f.input :last_name, required: true %>
     <%= f.input :department, :collection =>[
-"OTHER",
-"METHODIST OLIVE BRANCH LOGO ONLY",
+"OTHER (Contact Amanda Horrell)",
+"MOB LOGO ONLY (No Department)",
 "PATIENT ACCESS SERVICES",
 "CASE MANAGEMENT",
 "ECHOCARDIOGRAPHER",
@@ -44,7 +44,7 @@
 "INFORMATION TECHNOLOGY",
 "SOUTHAVEN DIAGNOSTIC CENTER",
 "UNIT SECRETARY"], required: true %>
-    <%= f.input :item, required: true, :collection => ["vest $35", "jacket $35"]%>
+    <%= f.input :item, required: true, :collection => ["jacket $35"]%>
     <%= f.input :description, required: true, :collection => ["Men's", "Women's"] %>
     <%= f.input :quantity, required: true %>
     <div id="mens_sizes" style="display: none">
