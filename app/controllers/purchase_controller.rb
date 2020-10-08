@@ -38,7 +38,7 @@ class PurchaseController < ApplicationController
 "INFORMATION TECHNOLOGY",
 "SOUTHAVEN DIAGNOSTIC CENTER",
 "UNIT SECRETARY",
-"MATERIALS SERVICES"]
+"MATERIALS SERVICES"].sort
     #@departments = Order.where(department: Order.pluck(:department))
   end
 
