@@ -47,7 +47,7 @@
 "UNIT SECRETARY",
 "MATERIALS SERVICES"
 ].sort, required: true %>
-    <%= f.input :item, required: true, :collection => ["vest $35"]%>
+    <%= f.input :item, required: true, :collection => ["jacket $35", "vest $35"]%>
     <%= f.input :description, required: true, :collection => ["Men's", "Women's"] %>
     <%= f.input :quantity, required: true %>
     <div id="mens_sizes" style="display: none">
